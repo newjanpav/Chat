@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController" customModule="Chat" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xeu-1d-DLI">
+                    <rect key="frame" x="34" y="83" width="346" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="346" id="MxU-ch-UMG"/>
+                        <constraint firstAttribute="height" constant="34" id="U4r-Aq-dcy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYV-Ao-906">
+                    <rect key="frame" x="34" y="125" width="346" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="cJv-tK-vth"/>
+                        <constraint firstAttribute="width" constant="346" id="hK7-v5-vDv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2v-Sm-Yfb">
+                    <rect key="frame" x="72" y="199" width="269" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="NjT-YW-ISl"/>
+                        <constraint firstAttribute="width" constant="269" id="jQU-bQ-gwO"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Log In" cornerStyle="capsule">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.63682323730000001" green="0.57192926079999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="a2v-Sm-Yfb" firstAttribute="top" secondItem="oYV-Ao-906" secondAttribute="bottom" constant="40" id="3H6-LV-qU2"/>
+                <constraint firstItem="xeu-1d-DLI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="6Qy-PG-LdN"/>
+                <constraint firstItem="a2v-Sm-Yfb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="72" id="OOf-4t-1IY"/>
+                <constraint firstItem="oYV-Ao-906" firstAttribute="top" secondItem="xeu-1d-DLI" secondAttribute="bottom" constant="8" symbolic="YES" id="T1v-hb-PTW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oYV-Ao-906" secondAttribute="trailing" constant="34" id="mur-q4-vlS"/>
+                <constraint firstItem="oYV-Ao-906" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="qDm-mD-kFx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oYV-Ao-906" secondAttribute="bottom" constant="703" id="udI-aG-2q4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xeu-1d-DLI" secondAttribute="trailing" constant="34" id="vCO-h0-qci"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="119"/>
+        </view>
+    </objects>
+</document>
