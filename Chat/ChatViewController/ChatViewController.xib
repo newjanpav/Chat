@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController" customModule="Chat" customModuleProvider="target">
             <connections>
+                <outlet property="chatTableView" destination="WiJ-RF-v6T" id="B93-MJ-6CH"/>
+                <outlet property="messageTextField" destination="X71-yX-Acc" id="7FS-SS-kkz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -43,13 +45,31 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="paperplane.fill" catalog="system"/>
+                    <connections>
+                        <action selector="sendMessagebuttonPressed:" destination="-1" eventType="touchUpInside" id="iC6-Hi-4Fi"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzw-Mh-E13">
+                    <rect key="frame" x="340" y="65" width="54" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="54" id="cet-32-Iqw"/>
+                        <constraint firstAttribute="height" constant="31" id="f9V-jz-ckw"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                    <connections>
+                        <action selector="logOutButtonPressed:" destination="-1" eventType="touchUpInside" id="Lml-JY-Dlb"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.89000000000000001" green="0.74184879530000003" blue="0.86709878799999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <accessibility key="accessibilityConfiguration" identifier="ChatViewController"/>
             <constraints>
                 <constraint firstItem="WiJ-RF-v6T" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="ANM-I7-Hdo"/>
+                <constraint firstItem="WiJ-RF-v6T" firstAttribute="top" secondItem="fzw-Mh-E13" secondAttribute="bottom" constant="8" symbolic="YES" id="Gxq-Up-BqG"/>
                 <constraint firstItem="T32-9Z-trG" firstAttribute="leading" secondItem="X71-yX-Acc" secondAttribute="trailing" constant="20" id="IjB-lB-lml"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fzw-Mh-E13" secondAttribute="trailing" constant="20" id="PKO-hJ-jx3"/>
                 <constraint firstItem="X71-yX-Acc" firstAttribute="top" secondItem="WiJ-RF-v6T" secondAttribute="bottom" constant="31" id="a6e-fB-H5M"/>
                 <constraint firstItem="T32-9Z-trG" firstAttribute="top" secondItem="WiJ-RF-v6T" secondAttribute="bottom" constant="34" id="eBS-wa-OO0"/>
                 <constraint firstItem="X71-yX-Acc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hkV-YQ-UjC"/>

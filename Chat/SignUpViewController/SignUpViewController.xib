@@ -4,16 +4,19 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="Chat" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="lj9-RZ-qUO" id="8Td-4b-acP"/>
+                <outlet property="passwordTextField" destination="XZG-4u-evh" id="33l-hH-hWf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="SignUpViewController" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -45,10 +48,14 @@
                     <buttonConfiguration key="configuration" style="filled" title="Sign Up" cornerStyle="capsule">
                         <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="signUpButtonPressed:" destination="-1" eventType="touchUpInside" id="ZSq-gd-RPb"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.67925425029999997" green="1" blue="0.52847564609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <accessibility key="accessibilityConfiguration" identifier="SignUpViewController"/>
             <constraints>
                 <constraint firstItem="XZG-4u-evh" firstAttribute="top" secondItem="lj9-RZ-qUO" secondAttribute="bottom" constant="22" id="2RC-cF-IcB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="g4x-r3-soj" secondAttribute="bottom" constant="592" id="8yh-Vf-25y"/>
@@ -59,5 +66,19 @@
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
         </view>
+        <viewController id="xiW-Yf-9eo">
+            <view key="view" contentMode="scaleToFill" id="V1D-DA-6bY">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <viewLayoutGuide key="safeArea" id="UKR-aM-fIP"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            </view>
+            <point key="canvasLocation" x="875" y="108"/>
+        </viewController>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

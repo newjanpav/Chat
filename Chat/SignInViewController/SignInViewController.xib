@@ -7,8 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController" customModule="Chat" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="Chat" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextFoeld" destination="xeu-1d-DLI" id="pSC-Mx-PDd"/>
+                <outlet property="passwordTextField" destination="oYV-Ao-906" id="Svp-GA-wXu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,31 +37,33 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2v-Sm-Yfb">
-                    <rect key="frame" x="72" y="199" width="269" height="52"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vg-Xb-g6S">
+                    <rect key="frame" x="118" y="196" width="189" height="49"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="52" id="NjT-YW-ISl"/>
-                        <constraint firstAttribute="width" constant="269" id="jQU-bQ-gwO"/>
+                        <constraint firstAttribute="height" constant="49" id="H1V-Xg-dS1"/>
+                        <constraint firstAttribute="width" constant="189" id="lFC-Mp-4IJ"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Log In" cornerStyle="capsule">
-                        <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                    </buttonConfiguration>
+                    <buttonConfiguration key="configuration" style="filled" title="Sign In" cornerStyle="capsule"/>
+                    <connections>
+                        <action selector="signInButtonPressed:" destination="-1" eventType="touchUpInside" id="y2l-BB-voQ"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.63682323730000001" green="0.57192926079999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <accessibility key="accessibilityConfiguration" identifier="LogInViewController"/>
             <constraints>
-                <constraint firstItem="a2v-Sm-Yfb" firstAttribute="top" secondItem="oYV-Ao-906" secondAttribute="bottom" constant="40" id="3H6-LV-qU2"/>
                 <constraint firstItem="xeu-1d-DLI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="6Qy-PG-LdN"/>
-                <constraint firstItem="a2v-Sm-Yfb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="72" id="OOf-4t-1IY"/>
                 <constraint firstItem="oYV-Ao-906" firstAttribute="top" secondItem="xeu-1d-DLI" secondAttribute="bottom" constant="8" symbolic="YES" id="T1v-hb-PTW"/>
+                <constraint firstItem="4vg-Xb-g6S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="118" id="XQ5-Nu-TfW"/>
+                <constraint firstItem="4vg-Xb-g6S" firstAttribute="top" secondItem="oYV-Ao-906" secondAttribute="bottom" constant="37" id="aNa-3B-V7T"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oYV-Ao-906" secondAttribute="trailing" constant="34" id="mur-q4-vlS"/>
                 <constraint firstItem="oYV-Ao-906" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="qDm-mD-kFx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oYV-Ao-906" secondAttribute="bottom" constant="703" id="udI-aG-2q4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xeu-1d-DLI" secondAttribute="trailing" constant="34" id="vCO-h0-qci"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="119"/>
+            <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
         </view>
     </objects>
 </document>
