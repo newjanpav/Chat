@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="Chat" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="SWw-0w-riz" id="Net-il-O0b"/>
                 <outlet property="emailTextFoeld" destination="xeu-1d-DLI" id="pSC-Mx-PDd"/>
                 <outlet property="passwordTextField" destination="oYV-Ao-906" id="Svp-GA-wXu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -19,49 +20,60 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xeu-1d-DLI">
-                    <rect key="frame" x="34" y="83" width="346" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xeu-1d-DLI">
+                    <rect key="frame" x="34" y="350" width="346" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="346" id="MxU-ch-UMG"/>
                         <constraint firstAttribute="height" constant="34" id="U4r-Aq-dcy"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYV-Ao-906">
-                    <rect key="frame" x="34" y="125" width="346" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYV-Ao-906">
+                    <rect key="frame" x="34" y="406" width="346" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="cJv-tK-vth"/>
                         <constraint firstAttribute="width" constant="346" id="hK7-v5-vDv"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vg-Xb-g6S">
-                    <rect key="frame" x="118" y="196" width="189" height="49"/>
+                    <rect key="frame" x="113" y="498" width="189" height="49"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="49" id="H1V-Xg-dS1"/>
                         <constraint firstAttribute="width" constant="189" id="lFC-Mp-4IJ"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Sign In" cornerStyle="capsule"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Sign In" cornerStyle="capsule">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="signInButtonPressed:" destination="-1" eventType="touchUpInside" id="y2l-BB-voQ"/>
                     </connections>
                 </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SWw-0w-riz">
+                    <rect key="frame" x="151" y="378" width="113" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="YeO-UH-08M"/>
+                        <constraint firstAttribute="width" constant="113" id="e5n-8e-B8i"/>
+                    </constraints>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.63682323730000001" green="0.57192926079999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <accessibility key="accessibilityConfiguration" identifier="LogInViewController"/>
             <constraints>
+                <constraint firstItem="SWw-0w-riz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="151" id="6KP-fN-F5N"/>
                 <constraint firstItem="xeu-1d-DLI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="6Qy-PG-LdN"/>
-                <constraint firstItem="oYV-Ao-906" firstAttribute="top" secondItem="xeu-1d-DLI" secondAttribute="bottom" constant="8" symbolic="YES" id="T1v-hb-PTW"/>
-                <constraint firstItem="4vg-Xb-g6S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="118" id="XQ5-Nu-TfW"/>
-                <constraint firstItem="4vg-Xb-g6S" firstAttribute="top" secondItem="oYV-Ao-906" secondAttribute="bottom" constant="37" id="aNa-3B-V7T"/>
+                <constraint firstItem="4vg-Xb-g6S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="113" id="Acu-0B-v8A"/>
+                <constraint firstItem="oYV-Ao-906" firstAttribute="top" secondItem="xeu-1d-DLI" secondAttribute="bottom" constant="22" id="Nsw-aI-be8"/>
+                <constraint firstItem="4vg-Xb-g6S" firstAttribute="top" secondItem="oYV-Ao-906" secondAttribute="bottom" constant="58" id="Tuh-K1-cSH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oYV-Ao-906" secondAttribute="trailing" constant="34" id="mur-q4-vlS"/>
                 <constraint firstItem="oYV-Ao-906" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="qDm-mD-kFx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oYV-Ao-906" secondAttribute="bottom" constant="703" id="udI-aG-2q4"/>
+                <constraint firstItem="SWw-0w-riz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="334" id="qFx-n1-shV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xeu-1d-DLI" secondAttribute="trailing" constant="34" id="vCO-h0-qci"/>
+                <constraint firstItem="xeu-1d-DLI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="306" id="w1I-xT-urT"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
         </view>

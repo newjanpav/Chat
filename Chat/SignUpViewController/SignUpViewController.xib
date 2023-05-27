@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="Chat" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="5BY-3G-D63" id="sqp-Rl-xg0"/>
                 <outlet property="emailTextField" destination="lj9-RZ-qUO" id="8Td-4b-acP"/>
                 <outlet property="passwordTextField" destination="XZG-4u-evh" id="33l-hH-hWf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,26 +21,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lj9-RZ-qUO">
-                    <rect key="frame" x="34" y="88" width="346" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lj9-RZ-qUO">
+                    <rect key="frame" x="34" y="350" width="346" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="bJ1-op-pb4"/>
                         <constraint firstAttribute="width" constant="346" id="uor-nI-GU0"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZG-4u-evh">
-                    <rect key="frame" x="34" y="144" width="346" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZG-4u-evh">
+                    <rect key="frame" x="35" y="406" width="346" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="346" id="PN4-RS-nWy"/>
                         <constraint firstAttribute="height" constant="34" id="oZ0-Iq-U9z"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4x-r3-soj">
-                    <rect key="frame" x="72" y="218" width="269" height="52"/>
+                    <rect key="frame" x="74" y="498" width="269" height="52"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="269" id="3gu-bI-M32"/>
                         <constraint firstAttribute="height" constant="52" id="Qp3-JO-owX"/>
@@ -52,17 +53,26 @@
                         <action selector="signUpButtonPressed:" destination="-1" eventType="touchUpInside" id="ZSq-gd-RPb"/>
                     </connections>
                 </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="5BY-3G-D63">
+                    <rect key="frame" x="198" y="378" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="6zM-Qq-JeL"/>
+                        <constraint firstAttribute="width" constant="20" id="KiM-te-rCR"/>
+                    </constraints>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.67925425029999997" green="1" blue="0.52847564609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <accessibility key="accessibilityConfiguration" identifier="SignUpViewController"/>
             <constraints>
-                <constraint firstItem="XZG-4u-evh" firstAttribute="top" secondItem="lj9-RZ-qUO" secondAttribute="bottom" constant="22" id="2RC-cF-IcB"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="g4x-r3-soj" secondAttribute="bottom" constant="592" id="8yh-Vf-25y"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lj9-RZ-qUO" secondAttribute="trailing" constant="34" id="EwS-zO-xNP"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XZG-4u-evh" secondAttribute="trailing" constant="34" id="RyH-3K-H1z"/>
-                <constraint firstItem="g4x-r3-soj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="72" id="eap-b2-5Mr"/>
-                <constraint firstItem="g4x-r3-soj" firstAttribute="top" secondItem="XZG-4u-evh" secondAttribute="bottom" constant="40" id="xIR-4A-KtG"/>
+                <constraint firstItem="XZG-4u-evh" firstAttribute="top" secondItem="lj9-RZ-qUO" secondAttribute="bottom" constant="22" id="3VJ-Vo-NDM"/>
+                <constraint firstItem="g4x-r3-soj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="74" id="4gX-iG-0j2"/>
+                <constraint firstItem="5BY-3G-D63" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="198" id="77P-ua-KSx"/>
+                <constraint firstItem="g4x-r3-soj" firstAttribute="top" secondItem="XZG-4u-evh" secondAttribute="bottom" constant="58" id="UOi-f5-Nzc"/>
+                <constraint firstItem="lj9-RZ-qUO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="306" id="iTa-hx-0pz"/>
+                <constraint firstItem="XZG-4u-evh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="jaf-3t-9si"/>
+                <constraint firstItem="lj9-RZ-qUO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="sIW-04-Qnu"/>
+                <constraint firstItem="5BY-3G-D63" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="334" id="ugL-QT-iza"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
         </view>

@@ -11,16 +11,20 @@ import FirebaseAuth
 
 class SignInViewController: UIViewController {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var emailTextFoeld: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.isHidden = true
     }
     
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
         
         if let email = emailTextFoeld.text,
            let password = passwordTextField.text {
@@ -29,12 +33,13 @@ class SignInViewController: UIViewController {
                     print("Error code: \(error.code)")
                     print("Error description: \(error.localizedDescription)")
                 }else{
-                    let vc = ChatViewController(nibName: "ChatViewController", bundle: nil)
+                    self?.activityIndicator.stopAnimating()
+                    let vc  = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
                     self?.navigationController?.pushViewController(vc, animated: true)
                     
                 }
             }
         }
     }
+    
 }
-     
