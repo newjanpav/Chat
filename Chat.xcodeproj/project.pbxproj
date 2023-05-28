@@ -99,6 +99,7 @@
 				04A5BF3B2A156313005C6546 /* AppDelegate.swift */,
 				04A5BF3D2A156313005C6546 /* SceneDelegate.swift */,
 				0471C1322A1D3C470091C39B /* Message.swift */,
+				04A5BF412A156313005C6546 /* Main.storyboard */,
 				04A5BF5F2A15713C005C6546 /* RootViewController */,
 				04A5BF602A15714E005C6546 /* SignUpViewController */,
 				04A5BF612A157164005C6546 /* SignInViewController */,
@@ -118,7 +119,6 @@
 		04A5BF5F2A15713C005C6546 /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
-				04A5BF412A156313005C6546 /* Main.storyboard */,
 				04A5BF3F2A156313005C6546 /* RootViewController.swift */,
 			);
 			path = RootViewController;
